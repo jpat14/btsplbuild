@@ -1,0 +1,10 @@
+#!/home/vagrant/training/buildout/mrbobenv/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'mr.bob==0.1.2','console_scripts','mrbob'
+__requires__ = 'mr.bob==0.1.2'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('mr.bob==0.1.2', 'console_scripts', 'mrbob')()
+    )
