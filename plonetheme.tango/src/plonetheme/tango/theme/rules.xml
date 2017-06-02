@@ -44,8 +44,8 @@
 
     <xsl:variable name="central">
       <xsl:if test="//aside[@id='portal-column-one'] and //aside[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
-      <xsl:if test="//aside[@id='portal-column-two'] and not(//aside[@id='portal-column-one'])">col-xs-12 col-sm-9</xsl:if>
-      <xsl:if test="//aside[@id='portal-column-one'] and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-9</xsl:if>
+      <xsl:if test="//aside[@id='portal-column-two'] and not(//aside[@id='portal-column-one'])">col-xs-12 col-sm-12</xsl:if>
+      <xsl:if test="//aside[@id='portal-column-one'] and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
       <xsl:if test="not(//aside[@id='portal-column-one']) and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
     </xsl:variable>
 
@@ -95,6 +95,8 @@
   <!-- Content header -->
   <replace css:theme="#portal-top" css:content-children="#portal-top" />
 
+  <!-- logo -->
+ <!--  <replace css:theme=".logo" css:content=".logo" /> -->
   <!-- footer -->
   <replace
     css:theme-children="footer > .container"
@@ -107,6 +109,12 @@
     <drop
     css:theme="#front-page-slider"
     css:if-not-content=".section-front-page.template-document_view" />
+
+    <!-- dynamic slider content -->
+    <replace
+    css:theme="#carousel-example-generic"
+    css:content="#carousel-example-generic"
+    href="/slider-images/@@slider-images" />
 
     <!-- Title and description -->
     <drop

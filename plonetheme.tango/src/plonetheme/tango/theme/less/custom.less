@@ -1,6 +1,32 @@
 /* our custom styles */
-
-// DELETE ME:
+body {
+    background: #1f3d7d;
+}
+@media screen and (min-width: 768px) {
+.brand {
+     padding: 25px 0 10px;
+ }
+}
+.logo {
+    display: block;
+    width: 23%;
+}
+.box {
+    padding: 30px 50px;
+}
+.navbar{
+    margin-bottom:40px;
+    @media (min-width: 888px) {
+        .container {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+.container {
+    background: #E9ECF2;
+    padding: 30px 30px;
+}
 .custom-theme-marker {
     display: none;
     position: absolute;
@@ -81,6 +107,10 @@ footer .portletActions{
 }
 
 footer {
+    margin-top: 40px;
+    .container {
+        padding: 0;
+    }
     .portlet {
         padding: 1em 0;
         margin-bottom: 0;
