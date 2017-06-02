@@ -1,0 +1,35 @@
+#!/usr/bin/python
+
+import sys
+sys.path[0:0] = [
+  '/home/vagrant/buildout-cache/eggs/plone.recipe.codeanalysis-2.2-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8-3.3.0-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/configparser-3.5.0-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/enum34-1.1.6-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/mccabe-0.6.1-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/pycodestyle-2.3.1-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/pyflakes-1.5.0-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_todo-0.7-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_string_format-0.2.3-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_quotes-0.11.0-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_print-2.0.2-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_plone_hasattr-0.2.post0-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_plone_api-1.4-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_pep3101-1.1-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_isort-2.0.1-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_deprecated-1.2-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_debugger-1.4.0-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_coding-1.3.0-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_blind_except-0.1.1-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/zc.recipe.egg-2.0.3-py2.7.egg',
+  '/usr/local/lib/python2.7/dist-packages',
+  '/home/vagrant/buildout-cache/eggs/check_manifest-0.35-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/testfixtures-4.14.3-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/isort-4.2.12-py2.7.egg',
+  '/home/vagrant/buildout-cache/eggs/flake8_polyfill-1.0.1-py2.7.egg',
+  ]
+
+import plone.recipe.codeanalysis.csslint
+
+if __name__ == '__main__':
+    sys.exit(plone.recipe.codeanalysis.csslint.console_script({'clean-lines': 'False', 'flake8-exclude': 'bootstrap.py,bootstrap-buildout.py,docs,*.egg.,omelette', 'recipe': 'plone.recipe.codeanalysis[recommended]', 'zptlint': 'False', 'flake8-max-complexity': '15', 'jshint': 'False', 'csslint-bin': 'csslint', 'clean-lines-exclude': '', 'i18ndude-bin': '', 'zptlint-bin': '', 'jscs-bin': 'jscs', 'flake8-extensions': '', 'executable': '/usr/bin/python', 'pre-commit-hook': 'True', 'jshint-suppress-warnings': 'True', 'jshint-bin': 'jshint', 'location': '/home/vagrant/training/buildout/plonetheme.tango/parts/code-analysis', 'jshint-exclude': '', '_e': '/home/vagrant/buildout-cache/eggs', 'jscs': 'False', '_b': '/home/vagrant/training/buildout/plonetheme.tango/bin', 'flake8': 'True', 'bin-directory': '/home/vagrant/training/buildout/plonetheme.tango/bin', 'jscs-exclude': '', 'eggs-directory': '/home/vagrant/buildout-cache/eggs', 'return-status-codes': 'True', 'flake8-max-line-length': '79', 'check-manifest': 'False', 'csslint': 'False', '_d': '/home/vagrant/training/buildout/plonetheme.tango/develop-eggs', 'develop-eggs-directory': '/home/vagrant/training/buildout/plonetheme.tango/develop-eggs', 'check-manifest-directory': '.', 'jenkins': 'False', 'find-untranslated': 'False', 'directory': '/home/vagrant/training/buildout/plonetheme.tango/src/plonetheme', 'multiprocessing': 'False', 'flake8-filesystem': 'False'}))
